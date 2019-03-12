@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AgileContent
+namespace LargestSibling
 {
-    static class Siblings
+    internal static class Siblings
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             GetLargestSibling(123);
         }
 
-        static void GetLargestSibling(int number)
+        private static void GetLargestSibling(int number)
         {   
             var digits = new List<int>();
             
-            for (;number != 0; number /= 10)
+            for ( ; number != 0; number /= 10)
                 digits.Add(number % 10);
             
             for (var num = 0; num < digits.Count; num++)
